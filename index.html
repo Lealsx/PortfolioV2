@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Leal — Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <span class="nav-logo">ll@portfolio<span class="cursor">_</span></span>
+        <ul class="nav-links">
+            <li><a href="#sobre">about</a></li>
+            <li><a href="#projetos">projects</a></li>
+            <li><a href="#contato">contact</a></li>
+        </ul>
+        <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-content">
+            <p class="hero-label animate">> Hello, World!</p>
+            <h1 class="hero-name animate">Luis Leal</h1>
+            <p class="hero-role animate">
+                <span class="prompt">$</span>
+                <span id="typed-role"></span><span class="cursor-blink">|</span>
+            </p>
+            <p class="hero-bio animate">Desenvolvedor Full Stack apaixonado por transformar ideias em experiências digitais.</p>
+            <div class="hero-actions animate">
+                <a href="#projetos" class="btn btn-primary">projetos</a>
+                <a href="#contato" class="btn btn-primary">contato</a>
+            </div>
+            <div class="hero-stats animate">
+                <div class="stat">
+                    <span class="stat-value">1+</span>
+                    <span class="stat-label">ano de exp.</span>
+                </div>
+                <span class="stat-divider">/</span>
+                <div class="stat">
+                    <span class="stat-value">15+</span>
+                    <span class="stat-label">projetos</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-line"></span>
+            <span class="scroll-text">scroll</span>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <p class="section-label">> about_me.sh</p>
+            <h2 class="section-title">Sobre mim</h2>
+            <div class="about-grid">
+                <div class="about-terminal">
+                    <div class="win-bar">
+                        <div class="win-dots">
+                            <span class="dot dot--red"></span>
+                            <span class="dot dot--yellow"></span>
+                            <span class="dot dot--green"></span>
+                        </div>
+                        <span class="win-title">about.txt</span>
+                    </div>
+                    <div class="win-body">
+                        <div class="t-line"><span class="t-key">nome</span><span class="t-sep">:</span><span class="t-val">Luis Leal</span></div>
+                        <div class="t-line"><span class="t-key">role</span><span class="t-sep">:</span><span class="t-val">Developer Full Stack</span></div>
+                        <div class="t-line"><span class="t-key">location</span><span class="t-sep">:</span><span class="t-val">Brasil</span></div>
+                        <div class="t-line t-line--gap"><span class="t-key">languages</span><span class="t-sep">:</span><span class="t-val">JS, TS, C#, Java, PHP</span></div>
+                        <div class="t-line"><span class="t-key">frontend</span><span class="t-sep">:</span><span class="t-val">HTML, CSS, React</span></div>
+                        <div class="t-line"><span class="t-key">backend</span><span class="t-sep">:</span><span class="t-val">Node.js, SQL, Oracle</span></div>
+                        <div class="t-line"><span class="t-key">tools</span><span class="t-sep">:</span><span class="t-val">N8N, Git, Docker</span></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Olá! Sou Luis, desenvolvedor full stack com 1 ano de experiência construindo aplicações web.</p>
+                    <p>Tenho paixão por criar soluções elegantes para problemas complexos. Do frontend ao backend, gosto de estar envolvido em cada etapa do desenvolvimento.</p>
+                    <p>Sempre aprendendo novas tecnologias e trabalhando em projetos pessoais para expandir meu repertório.</p>
+                    <div class="about-availability">
+                        <span class="availability-dot"></span>
+                        Disponível para novos projetos
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projetos" class="section section--alt">
+        <div class="container">
+            <p class="section-label">> ls ~/projects</p>
+            <h2 class="section-title">Projetos</h2>
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-card__top">
+                        <span class="project-card__num">01</span>
+                        <div class="project-card__links">
+                            <a href="https://github.com/Lealsx/Portfolio" target="_blank" class="pill-link">GIT</a>
+                            <a href="https://lealsx.github.io/Portfolio/" target="_blank" class="pill-link">↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-card__name">Portifolio 1.0</h3>
+                    <p class="project-card__desc">Foi meu primeiro portfólio, criado com HTML, CSS e JavaScript. Ali me fiz diversos desafios e formas diferentes de implementar soluções.</p>
+                    <div class="project-card__stack">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__top">
+                        <span class="project-card__num">02</span>
+                        <div class="project-card__links">
+                            <a href="https://github.com/Lealsx/Mail-de-Noticies" target="_blank" class="pill-link">GIT</a>
+                        </div>
+                    </div>
+                    <h3 class="project-card__name">mail-noticies</h3>
+                    <p class="project-card__desc">Sistema de envio de e-mails de notícias todos os dias pela manhã.</p>
+                    <div class="project-card__stack">
+                        <span>Node.js</span><span>TypeScript</span><span>Nodemailer</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__top">
+                        <span class="project-card__num">03</span>
+                        <div class="project-card__links">
+                            <a href="https://github.com/Lealsx/Taks-Tracker" target="_blank" class="pill-link">GIT</a>
+                        </div>
+                    </div>
+                    <h3 class="project-card__name">Task-Tracker</h3>
+                    <p class="project-card__desc">Aplicação para gerenciamento de tarefas com interface intuitiva e funcionalidades de acompanhamento.</p>
+                    <div class="project-card__stack">
+                        <span>JavaScript</span><span>CSS</span><span>HTML</span>
+                    </div>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contato" class="section">
+        <div class="container">
+            <p class="section-label">> ./connect --all</p>
+            <h2 class="section-title">Contato</h2>
+            <p class="contact-intro">Disponível para novos projetos e colaborações. Vamos criar algo incrível juntos.</p>
+            <div class="contact-list">
+                <a href="https://github.com/Lealsx" target="_blank" class="contact-item">
+                    <span class="contact-item__tag">github</span>
+                    <span class="contact-item__val">github.com/Lealsx</span>
+                    <span class="contact-item__arrow">→</span>
+                </a>
+                <a href="https://www.linkedin.com/in/luis-felipe-santos-leal-a783b22b3/" target="_blank" class="contact-item">
+                    <span class="contact-item__tag">linkedin</span>
+                    <span class="contact-item__val">luis-felipe-santos-leal</span>
+                    <span class="contact-item__arrow">→</span>
+                </a>
+                <a href="mailto:luisfelipe.leal2005@gmail.com" class="contact-item">
+                    <span class="contact-item__tag">email</span>
+                    <span class="contact-item__val">luisfelipe.leal2005@gmail.com</span>
+                    <span class="contact-item__arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-text"><span class="prompt">></span> Luis Leal © 2026</span>
+            <span class="footer-version">v2.0.0</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
