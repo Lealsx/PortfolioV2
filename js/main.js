@@ -3,7 +3,6 @@ const roles = [
     'Developer Full Stack',
     'React Developer',
     'Node.js Developer',
-    'Automação & N8N',
 ];
 
 let roleIdx = 0;
@@ -37,7 +36,7 @@ function tick() {
 // ===== SCROLL REVEAL =====
 function setupReveal() {
     const targets = document.querySelectorAll(
-        '.about-grid, .projects-grid, .contact-list, .contact-intro, .section-title, .section-label'
+        '.about-grid, .skills-grid, .projects-grid, .contact-list, .contact-intro, .section-title, .section-label'
     );
     targets.forEach(el => el.classList.add('reveal'));
 
@@ -79,26 +78,65 @@ function setupMobileMenu() {
     const links = document.querySelector('.nav-links');
     if (!btn || !links) return;
 
+    function close() {
+        links.classList.remove('open');
+        btn.classList.remove('open');
+    }
+
     btn.addEventListener('click', () => {
-        const open = links.style.display === 'flex';
-        links.style.display = open ? 'none' : 'flex';
-        links.style.flexDirection = 'column';
-        links.style.position = 'absolute';
-        links.style.top = '64px';
-        links.style.left = '0';
-        links.style.right = '0';
-        links.style.background = 'rgba(8,8,8,0.97)';
-        links.style.padding = '20px 40px';
-        links.style.borderBottom = '1px solid #1c1c1c';
-        links.style.gap = '20px';
-        if (open) links.style.display = 'none';
+        const isOpen = links.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
     });
 
-    links.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-            links.style.display = 'none';
-        });
-    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+}
+
+// ===== MATRIX RAIN =====
+function setupMatrixRain() {
+    const canvas = document.getElementById('matrixCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const chars = '01アイウエカキクサシスタチツテハヒフヘマミムメヤユラリルロン<>{}[]|/\\';
+    const fontSize = 13;
+    let drops = [];
+
+    function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const cols = Math.floor(canvas.width / fontSize);
+        drops = Array(cols).fill(0).map(() => Math.random() * -(canvas.height / fontSize));
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    function draw() {
+        ctx.fillStyle = 'rgba(8, 8, 8, 0.07)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.font = `${fontSize}px monospace`;
+
+        for (let i = 0; i < drops.length; i++) {
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+
+            // cabeça da coluna — mais brilhante
+            ctx.fillStyle = 'rgba(0, 212, 98, 1)';
+            ctx.fillText(chars[Math.floor(Math.random() * chars.length)], x, y);
+
+            // rastro
+            ctx.fillStyle = 'rgba(0, 212, 98, 0.45)';
+            ctx.fillText(chars[Math.floor(Math.random() * chars.length)], x, y - fontSize * 1);
+            ctx.fillStyle = 'rgba(0, 212, 98, 0.2)';
+            ctx.fillText(chars[Math.floor(Math.random() * chars.length)], x, y - fontSize * 2);
+
+            drops[i]++;
+            if (y > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+        }
+    }
+
+    setInterval(draw, 45);
 }
 
 // ===== INIT =====
@@ -107,4 +145,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setupReveal();
     setupActiveNav();
     setupMobileMenu();
+    setupMatrixRain();
 });

@@ -14,6 +14,7 @@
         <span class="nav-logo">ll@portfolio<span class="cursor">_</span></span>
         <ul class="nav-links">
             <li><a href="#sobre">about</a></li>
+            <li><a href="#skills">skills</a></li>
             <li><a href="#projetos">projects</a></li>
             <li><a href="#contato">contact</a></li>
         </ul>
@@ -25,17 +26,18 @@
     <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-grid-bg"></div>
+        <canvas id="matrixCanvas" aria-hidden="true"></canvas>
         <div class="hero-content">
-            <p class="hero-label animate">> Hello, World!</p>
+            <p class="hero-label animate">// olá, sou</p>
             <h1 class="hero-name animate">Luis Leal</h1>
             <p class="hero-role animate">
                 <span class="prompt">$</span>
                 <span id="typed-role"></span><span class="cursor-blink">|</span>
             </p>
-            <p class="hero-bio animate">Desenvolvedor Full Stack apaixonado por transformar ideias em experiências digitais.</p>
+            <p class="hero-bio animate">Transformo ideias em código. Apaixonado por web, automação e soluções que fazem a diferença.</p>
             <div class="hero-actions animate">
-                <a href="#projetos" class="btn btn-primary">projetos</a>
-                <a href="#contato" class="btn btn-primary">contato</a>
+                <a href="#projetos" class="btn btn-primary">$ cd projetos</a>
+                <a href="#contato" class="btn btn-secondary">$ contact --me</a>
             </div>
             <div class="hero-stats animate">
                 <div class="stat">
@@ -47,11 +49,16 @@
                     <span class="stat-value">15+</span>
                     <span class="stat-label">projetos</span>
                 </div>
+                <span class="stat-divider">/</span>
+                <div class="stat">
+                    <span class="stat-value">10+</span>
+                    <span class="stat-label">tecnologias</span>
+                </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span class="scroll-line"></span>
-            <span class="scroll-text">scroll</span>
+            <div class="hero-status animate">
+                <span class="hero-status__dot"></span>
+                disponível para novos projetos
+            </div>
         </div>
     </section>
 
@@ -75,18 +82,64 @@
                         <div class="t-line"><span class="t-key">role</span><span class="t-sep">:</span><span class="t-val">Developer Full Stack</span></div>
                         <div class="t-line"><span class="t-key">location</span><span class="t-sep">:</span><span class="t-val">Brasil</span></div>
                         <div class="t-line t-line--gap"><span class="t-key">languages</span><span class="t-sep">:</span><span class="t-val">JS, TS, C#, Java, PHP</span></div>
-                        <div class="t-line"><span class="t-key">frontend</span><span class="t-sep">:</span><span class="t-val">HTML, CSS, React</span></div>
-                        <div class="t-line"><span class="t-key">backend</span><span class="t-sep">:</span><span class="t-val">Node.js, SQL, Oracle</span></div>
-                        <div class="t-line"><span class="t-key">tools</span><span class="t-sep">:</span><span class="t-val">N8N, Git, Docker</span></div>
+                        <div class="t-line"><span class="t-key">frontend</span><span class="t-sep">:</span><span class="t-val">HTML, CSS, React, Angular, Git/Git Flow</span></div>
+                        <div class="t-line"><span class="t-key">backend</span><span class="t-sep">:</span><span class="t-val">Node.js, Java, PHP, Laravel, NPM, PostgreSQL</span></div>
+                        <div class="t-line"><span class="t-key">tools</span><span class="t-sep">:</span><span class="t-val">N8N, Git, Docker, PostMan, Docker, Access</span></div>
                     </div>
                 </div>
                 <div class="about-text">
                     <p>Olá! Sou Luis, desenvolvedor full stack com 1 ano de experiência construindo aplicações web.</p>
-                    <p>Tenho paixão por criar soluções elegantes para problemas complexos. Do frontend ao backend, gosto de estar envolvido em cada etapa do desenvolvimento.</p>
-                    <p>Sempre aprendendo novas tecnologias e trabalhando em projetos pessoais para expandir meu repertório.</p>
+                    <p>Sou um desenvolvedor FullStack curioso e dedicado, Graduando em Sistemas de Informação e com técnico em ADS.</p>
+                    <p>Desenvolvi diverssos projetos pessoais e acadêmicos utilizando HTML, CSS, JS, PHP, MySQL, ACCESS e N8N.</p>
                     <div class="about-availability">
                         <span class="availability-dot"></span>
                         Disponível para novos projetos
+                    </div>
+                    <a href="img/Luis Leal.pdf" class="btn btn-primary about-cv" target="_blank">$ download --cv</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+        <div class="container">
+            <p class="section-label">> cat stack.json</p>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <span class="skill-group__label">frontend</span>
+                    <div class="skill-group__tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>React/Next.js</span>
+                        <span>Angular</span>
+                        <span>Git/Git Flow</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-group__label">backend</span>
+                    <div class="skill-group__tags">
+                        <span>Node.js</span>
+                        <span>C#</span>
+                        <span>Java</span>
+                        <span>PHP</span>
+                        <span>Laravel</span>
+                        <span>npm</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <span class="skill-group__label">database &amp; tools</span>
+                    <div class="skill-group__tags">
+                        <span>SQL</span>
+                        <span>Oracle</span>
+                        <span>N8N</span>
+                        <span>Git</span>
+                        <span>PostMan</span>
+                        <span>Docker</span>
+
                     </div>
                 </div>
             </div>
